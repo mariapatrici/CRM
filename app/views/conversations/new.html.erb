@@ -1,0 +1,4 @@
+<%= simple_form_for [ @prospect, @conversation ] do |f| %>
+  <%= f.input :content %>
+  <%= f.submit "Cargar conversación", class: "btn btn-primary" %>
+<% end %>

@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Prospectos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>Telefono</th>
+      <th>Email</th>
+      <th>Estado</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @prospects.each do |prospect| %>
+      <tr>
+        <td><%= prospect.name %></td>
+        <td><%= prospect.last_name %></td>
+        <td><%= prospect.phone %></td>
+        <td><%= prospect.email %></td>
+        <td><%= prospect.status %></td>
+        <td><%= link_to 'Show', prospect %></td>
+        <td><%= link_to 'Edit', edit_prospect_path(prospect) %></td>
+        <td><%= link_to 'Destroy', prospect, method: :delete, data: { confirm: '¿Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= link_to 'Nuevo Prospecto', new_prospect_path %>

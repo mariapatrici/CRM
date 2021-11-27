@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<% @prospects.each do |prospect|%>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= prospect.name %>
+</p>
+
+<p>
+  <strong>Apellidos:</strong>
+  <%= prospect.last_name %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= prospect.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= prospect.email %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= prospect.status %>
+</p>
+<% end %>
+
+
+
+
+
+<%= link_to 'Back', prospects_path %> |
